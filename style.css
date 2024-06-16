@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: #000;
+}
+
+:root {
+  --primary-color: #d1510a;
+  --primary-2-color: #923a06;
+  --accent-color: #f3e8e2;
+}
+
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 0 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  line-height: 1.8;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 3px 50px -7px rgba(0, 0, 0, 0.3);
+  padding: 30px 0;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .left {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "DM Serif Display", serif;
+}
+
+nav .menu-items {
+  display: flex;
+  gap: 30px;
+}
+
+.btn {
+  background: var(--primary-color);
+  padding: 12px 32px;
+  border-radius: 20px;
+  color: #fff;
+  transition: all 300ms ease;
+}
+
+.btn.light {
+  border: 2px solid var(--primary-color);
+  background: #fff;
+  color: #000;
+}
+
+.btn:hover {
+  background: var(--primary-2-color);
+}
+
+.btn.light:hover {
+  color: #fff;
+  background: var(--primary-color);
+}
+
+/* Header */
+
+header {
+  margin-top: 83px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  background: url("images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  font-size: 60px;
+  color: #fff;
+  background: #000;
+  padding: 10px;
+  font-family: "DM Serif Display", serif;
+}
+
+h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 40px;
+  margin-top: 0;
+}
+
+/* ABout */
+
+#about .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+#about .left {
+  flex: 1;
+  font-size: 30px;
+  font-family: "DM Serif Display", serif;
+}
+
+#about .right {
+  flex: 2;
+}
+
+/* Collaborations */
+
+#collaborations {
+  background: var(--accent-color);
+}
+
+section {
+  padding: 60px 0;
+}
+
+#collaborations h2 {
+  text-align: center;
+}
+
+.brands img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.brands {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Releases */
+
+.split .container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.split img {
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.split .left,
+.split .right {
+  flex: 1;
+}
+
+/* Portfolio */
+
+#portfolio {
+  text-align: center;
+}
+
+#portfolio .btn-container {
+  margin: 30px 0;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Footer */
+
+footer {
+  background: var(--accent-color);
+  padding: 30px 0;
+}
+
+footer .icon svg {
+  height: 40px;
+}
+
+footer .address {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+footer .email {
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer .value {
+  font-weight: bold;
+}
+
+.mobile-menu,
+.menu-icon {
+  display: none;
+}
+
+.mobile-menu.active {
+  display: block;
+  position: fixed;
+  background: #fff;
+  top: 100px;
+  right: 20px;
+  padding: 24px;
+}
+
+.mobile-menu .mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (max-width: 700px) {
+  nav .menu-items,
+  nav .right .btn {
+    display: none;
+  }
+
+  nav .menu-icon svg {
+    width: 30px;
+  }
+
+  nav .menu-icon {
+    display: block;
+    padding: 3px;
+    cursor: pointer;
+  }
+
+  #about .container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .split .container {
+    flex-direction: column;
+  }
+
+  .split .left,
+  .split .right {
+    width: 100%;
+  }
+
+  .split img {
+    width: 100%;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+
+  footer .address {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
